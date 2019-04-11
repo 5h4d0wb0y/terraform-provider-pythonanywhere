@@ -1,0 +1,38 @@
+<% wrap_layout :inner do %>
+  <% content_for :sidebar do %>
+    <div class="docs-sidebar hidden-print affix-top" role="complementary">
+      <ul class="nav docs-sidenav">
+        <li<%= sidebar_current("docs-home") %>>
+          <a href="/docs/providers/index.html">All Providers</a>
+        </li>
+
+        <li<%= sidebar_current("docs-pythonanywhere-index") %>>
+          <a href="/docs/providers/pythonanywhere/index.html">Template Provider</a>
+        </li>
+
+        <li<%= sidebar_current("docs-pythonanywhere-datasource") %>>
+          <a href="#">Data Sources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-pythonanywhere-datasource-file") %>>
+              <a href="/docs/providers/pythonanywhere/d/file.html">pythonanywhere_file</a>
+            </li>
+            <li<%= sidebar_current("docs-pythonanywhere-datasource-cloudinit-config") %>>
+              <a href="/docs/providers/pythonanywhere/d/cloudinit_config.html">pythonanywhere_cloudinit_config</a>
+            </li>
+          </ul>
+        </li>
+
+        <li<%= sidebar_current("docs-pythonanywhere-resource") %>>
+          <a href="#">Resources</a>
+          <ul class="nav nav-visible">
+            <li<%= sidebar_current("docs-pythonanywhere-resource-dir") %>>
+              <a href="/docs/providers/pythonanywhere/r/dir.html">pythonanywhere_dir</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= yield %>
+<% end %>
