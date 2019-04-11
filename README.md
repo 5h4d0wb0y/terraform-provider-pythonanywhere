@@ -22,6 +22,7 @@ Usage
 ---------------------
 
 Set the environments:
+
 	export PYTHONANYWHERE_API_TOKEN="YOUR_API_TOKEN"
 	export PYTHONANYWHERE_USERNAME="YOUR_USERNAME"
 
