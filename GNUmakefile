@@ -2,12 +2,14 @@ TEST?=$$(go list ./... |grep -v 'vendor')
 GOFMT_FILES?=$$(find . -name '*.go' |grep -v vendor)
 WEBSITE_REPO=github.com/hashicorp/terraform-website
 PKG_NAME=pythonanywhere
-
 default: build
 
 build: fmtcheck
 	go install
 
+release:
+	bash '$(CURDIR)/scripts/release.sh'
+	
 test: fmtcheck
 	go test -i $(TEST) || exit 1
 	echo $(TEST) | \
